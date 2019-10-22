@@ -17,6 +17,7 @@
     "url": "https://github.com/ideal-postcodes/core-browser-bundled.git"
   },
   "scripts": {
+    "semantic-release": "semantic-release --no-ci",
     "build:umd:ie11": "rollup --config umd.ie11.config.js",
     "build:umd": "rollup --config umd.config.js",
     "build:esm": "rollup --config esm.config.js",
@@ -54,6 +55,7 @@
   "devDependencies": {
     "@babel/core": "~7.6.0",
     "@babel/preset-env": "~7.6.3",
+    "@cablanchard/semantic-release": "~1.2.1",
     "babel": "~6.23.0",
     "core-js": "~3.3.2",
     "http-server": "~0.11.1",
