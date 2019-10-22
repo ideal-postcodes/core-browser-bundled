@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.0.0...1.0.1) (2019-10-22)
+
+
+### Bug Fixes
+
+* **ESM:** Minify esm bundle ([83e7d45](https://github.com/ideal-postcodes/core-browser-bundled/commit/83e7d452abe4b8d37f024904fa89234e3aad0323))
+
 # 1.0.0 (2019-10-22)
 
 
