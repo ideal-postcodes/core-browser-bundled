@@ -1,0 +1,69 @@
+{
+  "name": "@ideal-postcodes/core-browser-bundled",
+  "version": "0.0.1",
+  "description": "JS bundles for api.ideal-postcodes.co.uk clients",
+  "author": {
+    "name": "Ideal Postcodes",
+    "email": "support@ideal-postcodes.co.uk",
+    "url": "https://ideal-postcodes.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/ideal-postcodes/core-browser-bundled/issues",
+    "email": "support@ideal-postcodes.co.uk"
+  },
+  "homepage": "https://github.com/ideal-postcodes/core-browser-bundled",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ideal-postcodes/core-browser-bundled.git"
+  },
+  "scripts": {
+    "build:umd:ie11": "rollup --config umd.ie11.config.js",
+    "build:umd": "rollup --config umd.config.js",
+    "build:esm": "rollup --config esm.config.js",
+    "start": "http-server",
+    "build": "npm run build:umd && npm run build:umd:ie11 && npm run build:esm",
+    "prepublishOnly": "npm run build"
+  },
+  "main": "dist/core-browser.umd.min.js",
+  "module": "dist/core-browser.esm.min.js",
+  "files": [
+    "dist"
+  ],
+  "prettier": {
+    "trailingComma": "es5"
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "keywords": [
+    "API",
+    "UK",
+    "Address",
+    "Postcode",
+    "Search",
+    "Ideal Postcodes",
+    "Browser"
+  ],
+  "release": {
+    "extends": "@cablanchard/semantic-release/dist/npm"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ideal-postcodes/core-browser": "~1.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.6.0",
+    "@babel/preset-env": "~7.6.3",
+    "babel": "~6.23.0",
+    "core-js": "~3.3.2",
+    "http-server": "~0.11.1",
+    "prettier": "~1.18.2",
+    "rollup": "~1.21.2",
+    "rollup-plugin-babel": "~4.3.3",
+    "rollup-plugin-commonjs": "~10.1.0",
+    "rollup-plugin-node-resolve": "~5.2.0",
+    "rollup-plugin-terser": "~5.1.2",
+    "rollup-plugin-uglify": "~6.0.3",
+    "semantic-release": "~15.13.24"
+  }
+}

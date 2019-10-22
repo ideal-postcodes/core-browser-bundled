@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Getting Started</title>
+    <style>
+      body {
+        max-width: 38rem;
+        padding: 2rem;
+        margin: auto;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://ideal-postcodes.co.uk/favicon-96x96.png"
+    />
+    <script type="module" src="../dist/core-browser.esm.min.js"></script>
+  </head>
+  <body>
+    <h1>ESM Demo</h1>
+    <p><code>GET https://api.ideal-postcodes.co.uk/postcodes/id11qd</code></p>
+    <pre id="result">// Print result here</pre>
+    <script type="module">
+      import { Client } from "../dist/core-browser.esm.min.js";
+      const client = new Client({ api_key: "iddqd" });
+      const postcode = "ID1 1QD";
+      const result = await client.lookupPostcode({ postcode });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Getting Started</title>
+    <style>
+      body {
+        max-width: 38rem;
+        padding: 2rem;
+        margin: auto;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://ideal-postcodes.co.uk/favicon-96x96.png"
+    />
+    <script src="../dist/core-browser.umd.min.js"></script>
+  </head>
+  <body>
+    <h1>UMD Demo</h1>
+    <p><code>GET https://api.ideal-postcodes.co.uk/postcodes/id11qd</code></p>
+    <pre id="result">// Print result here</pre>
+    <script>
+      var Client = IdealPostcodes.Client;
+      var client = new Client({ api_key: "iddqd" });
+      var postcode = "ID1 1QD";
+
+      client.lookupPostcode({ postcode }).then(function(result) {
+        document.getElementById("result").innerText = JSON.stringify(
+          result,
+          null,
+          2
+        );
+      });
+    </script>
+  </body>
+</html>
