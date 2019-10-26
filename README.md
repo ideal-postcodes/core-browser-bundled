@@ -24,6 +24,7 @@ We strongly recommend serving your own versioned copy. If served from jsdelivr.c
 - [core-browser.umd.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.umd.min.js)
 - [core-browser.umd.ie11.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.umd.ie11.min.js)
 - [core-browser.esm.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.min.js)
+- [core-browser.esm.modern.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.modern.min.js)
 
 ### Pinned Versions
 
@@ -47,7 +48,7 @@ Please follow the instructions on [jsdelivr.com/core-browser-bundled](https://ww
 
 ### Bundles Overview
 
-`core-browser-bundled` ships 3 javascript bundles.
+`core-browser-bundled` ships 4 javascript bundles.
 
 #### core-browser.umd.min.js
 
@@ -63,6 +64,12 @@ Please follow the instructions on [jsdelivr.com/core-browser-bundled](https://ww
 
 - **ES Module compatible**
 - Targets browsers with [ES Module support](https://caniuse.com/#search=module)
+
+#### core-browser.esm.latest.min.js
+
+- **ES Module compatible**
+- No legacy browser transpilation or polyfills
+- Smallest package size
 
 ### Usage
 
