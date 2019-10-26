@@ -25,7 +25,14 @@
       import { Client } from "../dist/core-browser.esm.min.js";
       const client = new Client({ api_key: "iddqd" });
       const postcode = "ID1 1QD";
-      const result = await client.lookupPostcode({ postcode });
+
+      client.lookupPostcode({ postcode }).then(result => {
+        document.getElementById("result").innerText = JSON.stringify(
+          result,
+          null,
+          2
+        );
+      });
     </script>
   </body>
 </html>
