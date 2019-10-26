@@ -21,12 +21,13 @@
     "build:umd:ie11": "rollup --config umd.ie11.config.js",
     "build:umd": "rollup --config umd.config.js",
     "build:esm": "rollup --config esm.config.js",
+    "build:esm:modern": "rollup --config esm.modern.config.js",
     "start": "http-server",
-    "build": "npm run build:umd && npm run build:umd:ie11 && npm run build:esm",
+    "build": "npm run build:umd && npm run build:umd:ie11 && npm run build:esm && npm run build:esm:modern",
     "prepublishOnly": "npm run build"
   },
   "main": "dist/core-browser.umd.min.js",
-  "module": "dist/core-browser.esm.min.js",
+  "module": "dist/core-browser.esm.modern.min.js",
   "files": [
     "dist"
   ],
