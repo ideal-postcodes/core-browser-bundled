@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.0.2...1.1.0) (2019-10-29)
+
+
+### Features
+
+* **ESM:** No transpile ESM bundle ([3b75f5c](https://github.com/ideal-postcodes/core-browser-bundled/commit/3b75f5c395da3d947a68f35b52325c36febc117a))
+
 ## [1.0.2](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.0.1...1.0.2) (2019-10-28)
 
 
