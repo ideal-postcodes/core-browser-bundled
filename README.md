@@ -58,7 +58,7 @@ Please follow the instructions on [jsdelivr.com/core-browser-bundled](https://ww
 #### core-browser.umd.ie11.min.js
 
 - **UMD compatible**
-- Transpiles core-browser to target IE11 as minimum browser version. This will create a fixed target bundle over time. The tradeoff to this is larger JS payload and worse performance.
+- Transpiles core-browser to target IE11 as minimum browser version. This will create a fixed target bundle over time. The tradeoff to this is larger script payload.
 
 #### core-browser.esm.min.js
 
@@ -69,7 +69,7 @@ Please follow the instructions on [jsdelivr.com/core-browser-bundled](https://ww
 
 - **ES Module compatible**
 - No legacy browser transpilation or polyfills
-- Smallest package size
+- Smallest package size (v1.1.0: 3.5kb gzipped)
 
 ### Usage
 
