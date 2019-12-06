@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.1.0...1.2.0) (2019-12-06)
+
+
+### Features
+
+* **Core-Browser:** Updates core-browser to 1.1.0 ([66347c2](https://github.com/ideal-postcodes/core-browser-bundled/commit/66347c28365497fdb10f4dd0ed2509651b1cdcfd))
+
 # [1.1.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.0.2...1.1.0) (2019-10-29)
 
 
