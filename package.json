@@ -51,7 +51,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ideal-postcodes/core-browser": "~1.0.2"
+    "@ideal-postcodes/core-browser": "~1.1.0"
   },
   "devDependencies": {
     "@babel/core": "~7.7.0",
