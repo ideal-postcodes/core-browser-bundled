@@ -15,12 +15,18 @@
       sizes="96x96"
       href="https://ideal-postcodes.co.uk/favicon-96x96.png"
     />
+    <link rel="stylesheet" href="../stylesheets/solarized-dark.css">
     <script src="../dist/core-browser.umd.min.js"></script>
   </head>
   <body>
     <h1>UMD Demo</h1>
     <p><code>GET https://api.ideal-postcodes.co.uk/postcodes/id11qd</code></p>
-    <pre id="result">// Print result here</pre>
+    <pre>
+      <code id="result">// Print result here</code>
+    </pre>
+
+    <script src="../highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>
       var Client = IdealPostcodes.Client;
       var client = new Client({ api_key: "iddqd" });
