@@ -50,9 +50,6 @@
     "extends": "@cablanchard/semantic-release/dist/npm"
   },
   "license": "MIT",
-  "dependencies": {
-    "@ideal-postcodes/core-browser": "~1.1.0"
-  },
   "devDependencies": {
     "@babel/core": "~7.8.0",
     "@babel/preset-env": "~7.8.2",
@@ -67,6 +64,7 @@
     "rollup-plugin-node-resolve": "~5.2.0",
     "rollup-plugin-terser": "~5.2.0",
     "rollup-plugin-uglify": "~6.0.3",
-    "semantic-release": "~15.14.0"
+    "semantic-release": "~15.14.0",
+    "@ideal-postcodes/core-browser": "~1.1.0"
   }
 }
