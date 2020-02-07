@@ -65,6 +65,6 @@
     "rollup-plugin-terser": "~5.2.0",
     "rollup-plugin-uglify": "~6.0.3",
     "semantic-release": "~15.14.0",
-    "@ideal-postcodes/core-browser": "~1.1.0"
+    "@ideal-postcodes/core-browser": "~1.2.0"
   }
 }
