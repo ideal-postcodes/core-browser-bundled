@@ -8,6 +8,7 @@
 [![Dependency Status](https://david-dm.org/ideal-postcodes/core-browser-bundled.svg)](https://david-dm.org/ideal-postcodes/core-browser-bundled)
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fcore-browser-bundled.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fcore-browser-bundled)
 [![jscdn](https://badgen.net/jsdelivr/v/npm/@ideal-postcodes/core-browser-bundled)](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/)
+[![Release](https://github.com/ideal-postcodes/core-browser-bundled/workflows/Release/badge.svg)](https://github.com/ideal-postcodes/core-browser-bundled/actions)
 
 This package exports polyfilled, minified copies of `core-browser` in various formats available on npm and various JavaScript cdns. It can be readily [dropped in](#usage) on a page without transpilation of `core-browser`.
 
