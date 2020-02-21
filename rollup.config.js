@@ -24,6 +24,14 @@ const terserConfig = {
   },
 };
 
+/**
+ * Whitelist files processed by Babel
+ */
+const include = [
+  "node_modules/@ideal-postcodes/core-interface/dist/**",
+  "node_modules/@ideal-postcodes/core-browser/dist/**",
+];
+
 export default [
   {
     input,
@@ -42,6 +50,7 @@ export default [
         // Prevent core-js from transforming itself
         // https://github.com/rollup/rollup-plugin-babel/issues/254
         ignore: [/core-js/],
+        include,
         presets: [
           [
             "@babel/preset-env",
@@ -74,6 +83,7 @@ export default [
         // Prevent core-js from transforming itself
         // https://github.com/rollup/rollup-plugin-babel/issues/254
         ignore: [/core-js/],
+        include,
         presets: [
           [
             "@babel/preset-env",
@@ -112,6 +122,7 @@ export default [
         // Prevent core-js from transforming itself
         // https://github.com/rollup/rollup-plugin-babel/issues/254
         ignore: [/core-js/],
+        include,
         presets: [
           [
             "@babel/preset-env",
