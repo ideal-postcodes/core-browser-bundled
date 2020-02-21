@@ -53,7 +53,6 @@
     "@ideal-postcodes/core-browser": "~1.2.1",
     "@rollup/plugin-commonjs": "~11.0.2",
     "@rollup/plugin-node-resolve": "~7.1.1",
-    "babel": "~6.23.0",
     "core-js": "~3.6.0",
     "http-server": "~0.12.0",
     "prettier": "~1.19.1",
