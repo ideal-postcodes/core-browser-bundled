@@ -1,8 +1,8 @@
 import "core-js";
-import commonjs from "rollup-plugin-commonjs";
 import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
-import resolve from "rollup-plugin-node-resolve";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 const input = "node_modules/@ideal-postcodes/core-browser/dist/index.js";
 
