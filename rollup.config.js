@@ -7,6 +7,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import { version, devDependencies, license } from "./package.json";
 
 const input = "node_modules/@ideal-postcodes/core-browser/dist/index.js";
+
 const banner = `/**
  * @license 
  * Ideal Postcodes <https://ideal-postcodes.co.uk>
@@ -16,6 +17,7 @@ const banner = `/**
  * ${license} Licence
  */`;
 
+// Configure terser to ignore build info banner
 const terserConfig = {
   output: {
     comments: (_, { value, type }) => {
@@ -24,15 +26,21 @@ const terserConfig = {
   },
 };
 
+const fetchPath = require.resolve("whatwg-fetch");
+
 /**
  * Whitelist files processed by Babel
  */
 const include = [
   "node_modules/@ideal-postcodes/core-interface/dist/**",
   "node_modules/@ideal-postcodes/core-browser/dist/**",
+  "node_modules/whatwg-fetch/dist/fetch.umd.js",
 ];
 
 export default [
+  /**
+   * UMD build targeting 99.75% browser share
+   */
   {
     input,
     output: {
@@ -40,16 +48,18 @@ export default [
       banner,
       format: "umd",
       name: "IdealPostcodes",
-      exports: "named" /** Disable warning for default imports */,
+      exports: "named", // Disable warning for default imports
+    },
+    // Inject fetch polyfill
+    moduleContext: {
+      [fetchPath]: "window",
     },
     plugins: [
       resolve(),
       commonjs(),
       babel({
         babelrc: false,
-        // Prevent core-js from transforming itself
-        // https://github.com/rollup/rollup-plugin-babel/issues/254
-        ignore: [/core-js/],
+        ignore: [/core-js/], // Prevent core-js from transforming itself https://github.com/rollup/rollup-plugin-babel/issues/254
         include,
         presets: [
           [
@@ -67,21 +77,24 @@ export default [
       terser(terserConfig),
     ],
   },
+
+  /**
+   * ESM build targeting minimum browser versions that allow [ES6 Modules](https://caniuse.com/#feat=es6-module)
+   */
   {
     input,
     output: {
       file: "./dist/core-browser.esm.min.js",
       banner,
       format: "esm",
-      exports: "named" /** Disable warning for default imports */,
+      exports: "named",
     },
     plugins: [
       resolve(),
       commonjs(),
       babel({
         babelrc: false,
-        // Prevent core-js from transforming itself
-        // https://github.com/rollup/rollup-plugin-babel/issues/254
+
         ignore: [/core-js/],
         include,
         presets: [
@@ -105,6 +118,9 @@ export default [
       terser(terserConfig),
     ],
   },
+  /**
+   * UMD build that targets ie11 as base
+   */
   {
     input,
     output: {
@@ -112,15 +128,14 @@ export default [
       banner,
       format: "umd",
       name: "IdealPostcodes",
-      exports: "named" /** Disable warning for default imports */,
+      exports: "named",
     },
+    moduleContext: { [fetchPath]: "window" },
     plugins: [
       resolve(),
       commonjs(),
       babel({
         babelrc: false,
-        // Prevent core-js from transforming itself
-        // https://github.com/rollup/rollup-plugin-babel/issues/254
         ignore: [/core-js/],
         include,
         presets: [
@@ -141,13 +156,16 @@ export default [
       terser(terserConfig),
     ],
   },
+  /**
+   * ESM build that targets latest browsers (no transpilation step)
+   */
   {
     input,
     output: {
       file: "./dist/core-browser.esm.modern.min.js",
       banner,
       format: "esm",
-      exports: "named" /** Disable warning for default imports */,
+      exports: "named",
     },
     plugins: [resolve(), commonjs(), terser(terserConfig)],
   },
