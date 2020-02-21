@@ -4,13 +4,32 @@ import { terser } from "rollup-plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 
+import { version, devDependencies, license } from "./package.json";
+
 const input = "node_modules/@ideal-postcodes/core-browser/dist/index.js";
+const banner = `/**
+ * @license 
+ * Ideal Postcodes <https://ideal-postcodes.co.uk>
+ * Copyright IDDQD Limited
+ * Core-Browser-Bunded ${version}
+ * Built on Core-Browser ${devDependencies["@ideal-postcodes/core-browser"]}
+ * ${license} Licence
+ */`;
+
+const terserConfig = {
+  output: {
+    comments: (_, { value, type }) => {
+      if (type === "comment2") return /@license/i.test(value);
+    },
+  },
+};
 
 export default [
   {
     input,
     output: {
       file: "./dist/core-browser.umd.min.js",
+      banner,
       format: "umd",
       name: "IdealPostcodes",
       exports: "named" /** Disable warning for default imports */,
@@ -36,13 +55,14 @@ export default [
           ],
         ],
       }),
-      terser(),
+      terser(terserConfig),
     ],
   },
   {
     input,
     output: {
       file: "./dist/core-browser.esm.min.js",
+      banner,
       format: "esm",
       exports: "named" /** Disable warning for default imports */,
     },
@@ -72,13 +92,14 @@ export default [
           ],
         ],
       }),
-      terser(),
+      terser(terserConfig),
     ],
   },
   {
     input,
     output: {
       file: "./dist/core-browser.umd.ie11.min.js",
+      banner,
       format: "umd",
       name: "IdealPostcodes",
       exports: "named" /** Disable warning for default imports */,
@@ -106,16 +127,17 @@ export default [
           ],
         ],
       }),
-      terser(),
+      terser(terserConfig),
     ],
   },
   {
     input,
     output: {
       file: "./dist/core-browser.esm.modern.min.js",
+      banner,
       format: "esm",
       exports: "named" /** Disable warning for default imports */,
     },
-    plugins: [resolve(), commonjs(), terser()],
+    plugins: [resolve(), commonjs(), terser(terserConfig)],
   },
 ];
