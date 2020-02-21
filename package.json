@@ -64,6 +64,6 @@
     "rollup-plugin-node-resolve": "~5.2.0",
     "rollup-plugin-terser": "~5.2.0",
     "semantic-release": "~15.14.0",
-    "@ideal-postcodes/core-browser": "~1.2.0"
+    "@ideal-postcodes/core-browser": "~1.2.1"
   }
 }
