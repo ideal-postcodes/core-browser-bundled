@@ -14,6 +14,8 @@ This package exports polyfilled, minified copies of `core-browser` in various fo
 
 If you intend to incorporate the browser client in your own bundle, please use [`core-browser`](https://github.com/ideal-postcodes/core-browser) as your `package.json` dependency.
 
+Builds tested against [a suite of modern and legacy, mobile and desktop browsers](https://github.com/ideal-postcodes/supported-browsers).
+
 ## Download
 
 Latest and pinned versions of each bundle can be downloaded from jsdelivr.com.
