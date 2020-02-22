@@ -5,7 +5,8 @@
 > JavaScript browser bundles for api.ideal-postcodes.co.uk client
 
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/core-browser-bundled/tree/master.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/core-browser-bundled/tree/master)
-[![Dependency Status](https://david-dm.org/ideal-postcodes/core-browser-bundled.svg)](https://david-dm.org/ideal-postcodes/core-browser-bundled)
+![Cross Browser Testing](https://github.com/ideal-postcodes/core-browser-bundled/workflows/Cross%20Browser%20Testing/badge.svg?branch=saucelabs)
+
 [![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fcore-browser-bundled.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fcore-browser-bundled)
 [![jscdn](https://badgen.net/jsdelivr/v/npm/@ideal-postcodes/core-browser-bundled)](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/)
 [![Release](https://github.com/ideal-postcodes/core-browser-bundled/workflows/Release/badge.svg)](https://github.com/ideal-postcodes/core-browser-bundled/actions)
