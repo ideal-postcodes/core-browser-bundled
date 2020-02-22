@@ -1,0 +1,12 @@
+{
+  "extends": "@cablanchard/tsconfig",
+  "compilerOptions": {
+    "removeComments": false,
+    "strict": true,
+    "target": "ESNext",
+    "outDir": "./dist",
+    "declaration": true,
+    "lib": ["es6", "dom"]
+  },
+  "exclude": ["node_modules"]
+}
