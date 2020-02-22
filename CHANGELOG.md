@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.3.0...1.4.0) (2020-02-22)
+
+
+### Features
+
+* **Fetch:** Inject fetch into UMD builds ([3982fa7](https://github.com/ideal-postcodes/core-browser-bundled/commit/3982fa721169198c02a86bd881eab81c936f2b61))
+* **Minification:** Swtich to terser for all bundles ([49b5250](https://github.com/ideal-postcodes/core-browser-bundled/commit/49b52506c71f68bff102dc08c12d4516373a1e23))
+
 # [1.3.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.2.0...1.3.0) (2020-02-07)
 
 
