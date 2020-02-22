@@ -30,11 +30,11 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Test
-        run: npm test
-
       - name: Build
         run: npm run build
+
+      - name: Test
+        run: npm test
 
       - name: Semantic Release
         run: npm run semantic-release
