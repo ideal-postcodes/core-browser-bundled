@@ -19,7 +19,7 @@ Builds tested against [a suite of modern and legacy, mobile and desktop browsers
 
 ## Download
 
-Latest and pinned versions of each bundle can be downloaded from jsdelivr.com.
+Latest and pinned versions of each bundle can be downloaded from [jsdelivr.com](https://www.jsdelivr.com).
 
 We strongly recommend serving your own versioned copy. If served from jsdelivr.com please attach a version number.
 
@@ -32,7 +32,15 @@ We strongly recommend serving your own versioned copy. If served from jsdelivr.c
 
 ### Pinned Versions
 
+⚠️ It is important you pin your bundle version in production. Pulling directly from latest may introduce backwards breaking changes.
+
 Please follow the instructions on [jsdelivr.com/core-browser-bundled](https://www.jsdelivr.com/package/npm/@ideal-postcodes/core-browser-bundled) to pin a specific version in production.
+
+Example `<script>` pinned to version `1.4.0`
+
+```
+<script src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled@1.4.0/dist/core-browser.umd.min.js"></script>
+```
 
 ## Links
 
@@ -58,16 +66,20 @@ Please follow the instructions on [jsdelivr.com/core-browser-bundled](https://ww
 
 - **UMD compatible**
 - Transpiles core-browser to target browsers with more than 0.25% marketshare according to [caniuse.com](https://caniuse.com/usage-table). This is a moving target and obselete browsers will lose support over time as new builds are created.
+- Bundled with `fetch` polyfill
+- Default export of the npm module
 
 #### core-browser.umd.ie11.min.js
 
 - **UMD compatible**
 - Transpiles core-browser to target IE11 as minimum browser version. This will create a fixed target bundle over time. The tradeoff to this is larger script payload.
+- Bundled with `fetch` polyfill
 
 #### core-browser.esm.min.js
 
 - **ES Module compatible**
 - Targets browsers with [ES Module support](https://caniuse.com/#search=module)
+- Default ES Module export
 
 #### core-browser.esm.latest.min.js
 
