@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.4.0...1.4.1) (2020-04-01)
+
+
+### Bug Fixes
+
+* **Fetch:** Add fetch with plugin-inject ([fbd6788](https://github.com/ideal-postcodes/core-browser-bundled/commit/fbd67882140d28d99632e3136c0d6df7ab81992f))
+
 # [1.4.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.3.0...1.4.0) (2020-02-22)
 
 
