@@ -58,7 +58,7 @@
     "@cablanchard/tsconfig": "~1.0.0",
     "@ideal-postcodes/core-browser": "~1.2.1",
     "@ideal-postcodes/supported-browsers": "~2.2.0",
-    "@open-wc/karma-esm": "~2.13.9",
+    "@open-wc/karma-esm": "~2.16.1",
     "@rollup/plugin-commonjs": "~11.1.0",
     "@rollup/plugin-inject": "~4.0.1",
     "@rollup/plugin-node-resolve": "~7.1.1",
