@@ -61,7 +61,7 @@
     "@open-wc/karma-esm": "~2.16.6",
     "@rollup/plugin-commonjs": "~11.1.0",
     "@rollup/plugin-inject": "~4.0.1",
-    "@rollup/plugin-node-resolve": "~7.1.1",
+    "@rollup/plugin-node-resolve": "~8.0.0",
     "@types/chai": "~4.2.9",
     "@types/mocha": "~7.0.1",
     "@types/puppeteer": "~2.0.0",
