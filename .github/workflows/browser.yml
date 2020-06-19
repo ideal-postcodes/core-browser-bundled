@@ -1,10 +1,12 @@
 name: Cross Browser Testing
 
 on:
+  schedule:
+    - cron: "1 5 * * 2"
   push:
     branches:
       - saucelabs
-      - saucelabs/** 
+      - saucelabs/**
 
 jobs:
   BrowserTests:
