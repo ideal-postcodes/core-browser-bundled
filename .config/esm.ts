@@ -17,7 +17,7 @@ module.exports = (config: any): void =>
     ...sauceConfig({ testName: "Core-Browser-Bundled", defaults }),
     browsers: Object.keys(customLaunchers),
     customLaunchers,
-    frameworks: ["esm", "mocha"],
+    frameworks: ["esm", ...defaults.frameworks],
     plugins: [
       require.resolve("@open-wc/karma-esm"),
       "karma-mocha",
