@@ -1,7 +1,13 @@
 /**
  * Local test runner
  */
-import { reporters, basePath, singleRun, preprocessors } from "./config";
+import {
+  frameworks,
+  reporters,
+  basePath,
+  singleRun,
+  preprocessors,
+} from "./config";
 
 import { executablePath } from "puppeteer";
 process.env.CHROME_BIN = executablePath();
@@ -11,7 +17,7 @@ module.exports = (config: any): void =>
     karmaTypescriptConfig: { compilerOptions: {} },
     preprocessors,
     reporters,
-    frameworks: ["esm", "mocha"],
+    frameworks: ["esm", ...frameworks],
     plugins: [
       require.resolve("@open-wc/karma-esm"),
       "karma-mocha",
