@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.4.1...1.4.2) (2020-08-07)
+
+
+### Bug Fixes
+
+* **UMD:** Extend global IdealPostcodes namespace ([ed484ee](https://github.com/ideal-postcodes/core-browser-bundled/commit/ed484eea1ceab5995cd329b6f87fb8ede87875fc))
+
 ## [1.4.1](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.4.0...1.4.1) (2020-04-01)
 
 
