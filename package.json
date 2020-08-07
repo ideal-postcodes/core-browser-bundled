@@ -1,6 +1,6 @@
 {
   "name": "@ideal-postcodes/core-browser-bundled",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "JS bundles for api.ideal-postcodes.co.uk clients",
   "author": {
     "name": "Ideal Postcodes",
