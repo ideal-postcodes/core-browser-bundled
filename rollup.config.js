@@ -48,6 +48,7 @@ export default [
       file: "./dist/core-browser.umd.min.js",
       banner,
       format: "umd",
+      extend: true,
       name: "IdealPostcodes",
       exports: "named", // Disable warning for default imports
     },
@@ -129,6 +130,7 @@ export default [
       file: "./dist/core-browser.umd.ie11.min.js",
       banner,
       format: "umd",
+      extend: true,
       name: "IdealPostcodes",
       exports: "named",
     },
