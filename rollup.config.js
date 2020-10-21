@@ -10,7 +10,7 @@ import { version, devDependencies, license } from "./package.json";
 const input = "node_modules/@ideal-postcodes/core-browser/esm/index.js";
 
 const banner = `/**
- * @license 
+ * @license
  * Ideal Postcodes <https://ideal-postcodes.co.uk>
  * Copyright IDDQD Limited
  * Core-Browser-Bunded ${version}
@@ -55,6 +55,11 @@ export default [
     // Inject fetch polyfill
     moduleContext: {
       [fetchPath]: "window",
+      "node_modules/@ideal-postcodes/core-browser/esm/agent.js": "Agent",
+      "node_modules/@ideal-postcodes/core-browser/esm/timed_fetch.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
     },
     plugins: [
       resolve(),
@@ -91,6 +96,14 @@ export default [
       banner,
       format: "esm",
       exports: "named",
+    },
+    moduleContext: {
+      [fetchPath]: "window",
+      "node_modules/@ideal-postcodes/core-browser/esm/agent.js": "Agent",
+      "node_modules/@ideal-postcodes/core-browser/esm/timed_fetch.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
     },
     plugins: [
       resolve(),
@@ -134,7 +147,14 @@ export default [
       name: "IdealPostcodes",
       exports: "named",
     },
-    moduleContext: { [fetchPath]: "window" },
+    moduleContext: {
+      [fetchPath]: "window",
+      "node_modules/@ideal-postcodes/core-browser/esm/agent.js": "Agent",
+      "node_modules/@ideal-postcodes/core-browser/esm/timed_fetch.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
+    },
     plugins: [
       resolve(),
       commonjs(),
@@ -171,6 +191,11 @@ export default [
       banner,
       format: "esm",
       exports: "named",
+    },
+    moduleContext: {
+      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
+      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
     },
     plugins: [resolve(), commonjs(), terser(terserConfig)],
   },
