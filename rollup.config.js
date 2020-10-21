@@ -7,7 +7,7 @@ import inject from "@rollup/plugin-inject";
 
 import { version, devDependencies, license } from "./package.json";
 
-const input = "node_modules/@ideal-postcodes/core-browser/dist/index.js";
+const input = "node_modules/@ideal-postcodes/core-browser/esm/index.js";
 
 const banner = `/**
  * @license 
@@ -33,8 +33,8 @@ const fetchPath = require.resolve("whatwg-fetch");
  * Whitelist files processed by Babel
  */
 const include = [
-  "node_modules/@ideal-postcodes/core-interface/dist/**",
-  "node_modules/@ideal-postcodes/core-browser/dist/**",
+  "node_modules/@ideal-postcodes/core-interface/esm/**",
+  "node_modules/@ideal-postcodes/core-browser/esm/**",
   "node_modules/whatwg-fetch/dist/fetch.umd.js",
 ];
 
