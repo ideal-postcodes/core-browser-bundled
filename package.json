@@ -59,7 +59,7 @@
     "@cablanchard/semantic-release": "~1.3.0",
     "@cablanchard/tsconfig": "~1.0.0",
     "@ideal-postcodes/core-browser": "~1.3.0",
-    "@ideal-postcodes/supported-browsers": "~2.4.0",
+    "@ideal-postcodes/supported-browsers": "~2.5.0",
     "@open-wc/karma-esm": "~3.0.0",
     "@rollup/plugin-commonjs": "~12.0.0",
     "@rollup/plugin-inject": "~4.0.1",
