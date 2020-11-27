@@ -28,8 +28,8 @@ export const karmaTypescriptConfig = {
 };
 
 export const files = [
-  { pattern: "test/**/*.ts" },
   "node_modules/whatwg-fetch/dist/fetch.umd.js",
+  { pattern: "test/**/*.ts" },
 ];
 
 export const reporters = ["dots", "karma-typescript"];
