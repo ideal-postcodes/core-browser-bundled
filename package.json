@@ -65,7 +65,7 @@
     "@rollup/plugin-inject": "~4.0.1",
     "@rollup/plugin-node-resolve": "~10.0.0",
     "@types/chai": "~4.2.9",
-    "@types/mocha": "~8.0.0",
+    "@types/mocha": "~8.2.0",
     "@types/puppeteer": "~5.4.0",
     "chai": "~4.2.0",
     "core-js": "~3.6.0",
