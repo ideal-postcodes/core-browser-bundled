@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.4.2...1.5.0) (2021-01-04)
+
+
+### Bug Fixes
+
+* **Babel:** Upgrade + fix ([bb592b8](https://github.com/ideal-postcodes/core-browser-bundled/commit/bb592b8fa5c50373b944a8ed68cbbfe1c2a391ce))
+
+
+### Features
+
+* **ESM:** Reduce bundle size using ESM builds ([0375b12](https://github.com/ideal-postcodes/core-browser-bundled/commit/0375b12012082abf708d939c40426d8eafdabf9b))
+
 ## [1.4.2](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.4.1...1.4.2) (2020-08-07)
 
 
