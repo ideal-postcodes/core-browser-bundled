@@ -1,5 +1,5 @@
 import "core-js";
-import babel from "rollup-plugin-babel";
+import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -38,6 +38,9 @@ const include = [
   "node_modules/whatwg-fetch/dist/fetch.umd.js",
 ];
 
+const context = "window";
+const babelHelpers = "bundled";
+
 export default [
   /**
    * UMD build targeting 99.75% browser share
@@ -52,21 +55,14 @@ export default [
       name: "IdealPostcodes",
       exports: "named", // Disable warning for default imports
     },
-    // Inject fetch polyfill
-    moduleContext: {
-      [fetchPath]: "window",
-      "node_modules/@ideal-postcodes/core-browser/esm/agent.js": "Agent",
-      "node_modules/@ideal-postcodes/core-browser/esm/timed_fetch.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
-    },
+    context,
     plugins: [
       resolve(),
       commonjs(),
       inject({ fetch: ["whatwg-fetch", "fetch"] }),
       babel({
         babelrc: false,
+        babelHelpers,
         ignore: [/core-js/], // Prevent core-js from transforming itself https://github.com/rollup/rollup-plugin-babel/issues/254
         include,
         presets: [
@@ -97,20 +93,13 @@ export default [
       format: "esm",
       exports: "named",
     },
-    moduleContext: {
-      [fetchPath]: "window",
-      "node_modules/@ideal-postcodes/core-browser/esm/agent.js": "Agent",
-      "node_modules/@ideal-postcodes/core-browser/esm/timed_fetch.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
-    },
+    context,
     plugins: [
       resolve(),
       commonjs(),
       babel({
         babelrc: false,
-
+        babelHelpers,
         ignore: [/core-js/],
         include,
         presets: [
@@ -147,20 +136,14 @@ export default [
       name: "IdealPostcodes",
       exports: "named",
     },
-    moduleContext: {
-      [fetchPath]: "window",
-      "node_modules/@ideal-postcodes/core-browser/esm/agent.js": "Agent",
-      "node_modules/@ideal-postcodes/core-browser/esm/timed_fetch.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
-    },
+    context,
     plugins: [
       resolve(),
       commonjs(),
       inject({ fetch: ["whatwg-fetch", "fetch"] }),
       babel({
         babelrc: false,
+        babelHelpers,
         ignore: [/core-js/],
         include,
         presets: [
@@ -186,16 +169,12 @@ export default [
    */
   {
     input,
+    context,
     output: {
       file: "./dist/core-browser.esm.modern.min.js",
       banner,
       format: "esm",
       exports: "named",
-    },
-    moduleContext: {
-      "node_modules/@ideal-postcodes/core-interface/esm/client.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/error.js": "window",
-      "node_modules/@ideal-postcodes/core-interface/esm/util.js": "window",
     },
     plugins: [resolve(), commonjs(), terser(terserConfig)],
   },
