@@ -63,7 +63,7 @@
     "@ideal-postcodes/core-browser": "~1.4.0",
     "@rollup/plugin-commonjs": "~12.0.0",
     "@rollup/plugin-inject": "~4.0.1",
-    "@rollup/plugin-node-resolve": "~11.0.1",
+    "@rollup/plugin-node-resolve": "~11.1.1",
     "@types/chai": "~4.2.9",
     "@types/mocha": "~8.2.0",
     "@types/puppeteer": "~5.4.0",
