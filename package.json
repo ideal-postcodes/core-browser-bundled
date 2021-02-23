@@ -55,7 +55,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "~7.12.3",
-    "@babel/preset-env": "~7.12.0",
+    "@babel/preset-env": "~7.13.0",
     "@cablanchard/semantic-release": "~1.3.0",
     "@cablanchard/tsconfig": "~2.0.0",
     "@ideal-postcodes/supported-browsers": "~2.5.0",
