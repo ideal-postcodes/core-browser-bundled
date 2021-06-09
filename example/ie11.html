@@ -29,10 +29,13 @@
     <pre id="result">// Print result here</pre>
     <script>
       var Client = IdealPostcodes.Client;
+      var lookupPostcode = IdealPostcodes.lookupPostcode;
       var client = new Client({ api_key: "iddqd" });
       var postcode = "ID1 1QD";
 
-      client.lookupPostcode({ postcode: postcode }).then(function (result) {
+      lookupPostcode({ postcode: postcode, client: client }).then(function (
+        result
+      ) {
         document.getElementById("result").innerText = JSON.stringify(
           result,
           null,
