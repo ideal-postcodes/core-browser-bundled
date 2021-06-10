@@ -80,7 +80,7 @@
     "@ideal-postcodes/supported-browsers": "~2.5.0",
     "@open-wc/karma-esm": "~4.0.0",
     "@rollup/plugin-babel": "~5.3.0",
-    "@rollup/plugin-commonjs": "~12.0.0",
+    "@rollup/plugin-commonjs": "~19.0.0",
     "@rollup/plugin-inject": "~4.0.1",
     "@rollup/plugin-node-resolve": "~11.2.0",
     "@size-limit/preset-big-lib": "~4.9.2",
