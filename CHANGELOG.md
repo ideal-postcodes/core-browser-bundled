@@ -1,3 +1,28 @@
+# [2.0.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.5.0...2.0.0) (2021-06-10)
+
+
+### Features
+
+* **V2 Update:** Core Browser V2 ([184ce11](https://github.com/ideal-postcodes/core-browser-bundled/commit/184ce11295dafb9b6c6fac5dfaa99cf9e527fef0))
+
+
+### Performance Improvements
+
+* **Size:** Track bundle size ([15f6eba](https://github.com/ideal-postcodes/core-browser-bundled/commit/15f6ebabf44a7b13fca5573990eac521c93a027a))
+
+
+### BREAKING CHANGES
+
+* **V2 Update:** - Package now exports a `defaults` object
+- Client.defaults has been removed
+- All client config is now stored in `client.config`
+- All resources have been removed from the client. Instead retrieve
+these from the library and inject the client. E.g.
+`client.postcodes.retrieve` becomes `postcodes.retrieve(client, ...)`
+- Helper methods (like lookupPostcode, ping) have been removed from the client.
+Instead retrieve these from teh library and inject the client. E.g.
+`client.lookupPostcode` becomes `lookupPostcode(client, ...)`
+
 # [1.5.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.4.2...1.5.0) (2021-01-04)
 
 
