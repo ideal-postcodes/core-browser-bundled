@@ -25,10 +25,10 @@ We strongly recommend serving your own versioned copy. If served from jsdelivr.c
 
 ### Latest Versions
 
-- [core-browser.umd.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.umd.min.js)
-- [core-browser.umd.ie11.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.umd.ie11.min.js)
-- [core-browser.esm.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.min.js)
-- [core-browser.esm.modern.min.js@latest](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.modern.min.js)
+- [core-browser.umd.min.js@2](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled@2/dist/core-browser.umd.min.js)
+- [core-browser.umd.ie11.min.js@2](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled@2/dist/core-browser.umd.ie11.min.js)
+- [core-browser.esm.min.js@2](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled@2/dist/core-browser.esm.min.js)
+- [core-browser.esm.modern.min.js@2](https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled@2/dist/core-browser.esm.modern.min.js)
 
 ### Pinned Versions
 
@@ -96,12 +96,12 @@ Example `<script>` pinned to version `1.4.0`
 
 <script>
   var Client = IdealPostcodes.Client;
+  var lookupPostcode = IdealPostcodes.lookupPostcode;
   var client = new Client({ api_key: "iddqd" });
   var postcode = "ID1 1QD";
-  client.lookupPostcode({ postcode })
-    .then(function(result) {
-      console.log(result);
-    });
+  lookupPostcode({ postcode, client }).then(function (result) {
+    console.log(result);
+  });
 </script>
 ```
 
@@ -110,13 +110,17 @@ Example `<script>` pinned to version `1.4.0`
 ```html
 <script
   type="module"
-  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.min.js"></script>
+  src="https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.min.js"
+></script>
 
 <script type="module">
-import { Client } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.min.js";
-const client = new Client({ api_key: "iddqd" });
-const postcode = "ID1 1QD";
-const result = await client.lookupPostcode({ postcode });
+  import {
+    Client,
+    lookupPostcode,
+  } from "https://cdn.jsdelivr.net/npm/@ideal-postcodes/core-browser-bundled/dist/core-browser.esm.min.js";
+  const client = new Client({ api_key: "iddqd" });
+  const postcode = "ID1 1QD";
+  const result = await lookupPostcode({ postcode, client });
 </script>
 ```
 
