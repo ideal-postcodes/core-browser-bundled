@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ideal-postcodes/core-browser-bundled/compare/2.0.0...2.0.1) (2021-07-21)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @ideal-postcodes/core-browser from 2.0.0 to 2.0.1 ([#491](https://github.com/ideal-postcodes/core-browser-bundled/issues/491)) ([ba96258](https://github.com/ideal-postcodes/core-browser-bundled/commit/ba96258a2b391595afa1a9db3d08b48cdf13b143))
+
 # [2.0.0](https://github.com/ideal-postcodes/core-browser-bundled/compare/1.5.0...2.0.0) (2021-06-10)
 
 
