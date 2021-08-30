@@ -88,7 +88,7 @@
     "@types/mocha": "~8.2.0",
     "@types/puppeteer": "~5.4.0",
     "chai": "~4.3.0",
-    "core-js": "~3.15.1",
+    "core-js": "~3.16.4",
     "dotenv": "~10.0.0",
     "http-server": "~13.0.1",
     "karma": "~6.3.1",
