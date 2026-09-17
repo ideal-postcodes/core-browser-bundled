@@ -54,19 +54,19 @@
   },
   "size-limit": [
     {
-      "path": "dist/core-browser-esm.min.js",
+      "path": "dist/core-browser.esm.min.js",
       "limit": "40kb"
     },
     {
-      "path": "dist/core-browser-esm.modern.min.js",
+      "path": "dist/core-browser.esm.modern.min.js",
       "limit": "40kb"
     },
     {
-      "path": "dist/core-browser-umd.ie11.min.js",
+      "path": "dist/core-browser.umd.ie11.min.js",
       "limit": "40kb"
     },
     {
-      "path": "dist/core-browser-umd.min.js",
+      "path": "dist/core-browser.umd.min.js",
       "limit": "40kb"
     }
   ],
@@ -83,7 +83,7 @@
     "@rollup/plugin-inject": "5.0.5",
     "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-terser": "1.0.0",
-    "@size-limit/preset-big-lib": "~4.9.2",
+    "@size-limit/file": "14.0.0",
     "@types/chai": "4.3.20",
     "@types/mocha": "10.0.10",
     "chai": "4.5.0",
@@ -101,7 +101,7 @@
     "regenerator-runtime": "0.14.1",
     "rollup": "4.63.3",
     "semantic-release": "~19.0.3",
-    "size-limit": "~4.9.2",
+    "size-limit": "14.0.0",
     "ts-node": "10.9.2",
     "typescript": "5.2.2",
     "whatwg-fetch": "3.6.20"
