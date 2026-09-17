@@ -1,4 +1,4 @@
-import { Client } from "core-browser.esm.min.js";
+import { Client } from "/bundle.js";
 
 const SUCCESS = 200;
 const api_key = "iddqd";

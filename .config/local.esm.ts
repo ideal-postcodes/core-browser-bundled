@@ -14,19 +14,16 @@ module.exports = (config: any): void =>
     karmaTypescriptConfig: { compilerOptions: {} },
     preprocessors,
     reporters,
-    frameworks: ["esm", ...frameworks],
+    frameworks,
     plugins: [
-      require.resolve("@open-wc/karma-esm"),
       "karma-mocha",
       "karma-typescript",
       "karma-chrome-launcher",
     ],
     singleRun,
     basePath,
-    esm: {
-      nodeResolve: true,
-      moduleDirs: ["node_modules", "dist"],
-    },
+    // Test imports the bundle from a fixed path
+    proxies: { "/bundle.js": "/base/dist/core-browser.esm.min.js" },
     browsers: ["ChromeHeadless"],
     files: [
       { pattern: "test/esm.integration.js", type: "module" },
