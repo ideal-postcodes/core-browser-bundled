@@ -8,24 +8,19 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [22.x, 24.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v7
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-${{ matrix.node-version }}
+          cache: npm
 
       - name: Install
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
