@@ -46,8 +46,7 @@ Example `<script>` pinned to version `1.4.0`
 
 - [Bundles Overview](#bundles-overview)
 - [Usage](#usage)
-- [Client Documentation](https://core-interface.ideal-postcodes.dev/#documentation)
-- [Core JS API Client Documentation](https://core-interface.ideal-postcodes.dev/)
+- [Client Documentation](https://github.com/ideal-postcodes/core-interface#documentation)
 - [npm Module](https://www.npmjs.com/package/@ideal-postcodes/core-browser-bundled)
 - [GitHub Repository](https://github.com/ideal-postcodes/core-browser-bundled)
 
@@ -128,7 +127,7 @@ Example `<script>` pinned to version `1.4.0`
 
 This package is a transpiled copy of [`ideal-postcodes/core-browser`](https://github.com/ideal-postcodes/core-browser). You can find the quickstart [here](https://github.com/ideal-postcodes/core-browser#quickstart).
 
-For a complete list of client methods, including low level resource methods, please see the [core-interface documentation](https://core-interface.ideal-postcodes.dev/#documentation)
+For a complete list of client methods, including low level resource methods, please see the [core-interface documentation](https://github.com/ideal-postcodes/core-interface#documentation)
 
 ## Build
 
