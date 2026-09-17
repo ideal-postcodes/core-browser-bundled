@@ -74,7 +74,7 @@
   "devDependencies": {
     "@babel/core": "7.29.7",
     "@babel/preset-env": "7.29.7",
-    "@cablanchard/semantic-release": "~1.3.0",
+    "@cablanchard/semantic-release": "2.0.0",
     "@cablanchard/tsconfig": "2.0.0",
     "@ideal-postcodes/core-browser": "2.0.3",
     "@ideal-postcodes/supported-browsers": "2.5.0",
@@ -100,7 +100,7 @@
     "prettier": "3.9.7",
     "regenerator-runtime": "0.14.1",
     "rollup": "4.63.3",
-    "semantic-release": "~19.0.3",
+    "semantic-release": "25.0.9",
     "size-limit": "14.0.0",
     "ts-node": "10.9.2",
     "typescript": "5.2.2",
