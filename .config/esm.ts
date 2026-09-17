@@ -17,17 +17,13 @@ module.exports = (config: any): void =>
     ...sauceConfig({ testName: "Core-Browser-Bundled", defaults }),
     browsers: Object.keys(customLaunchers),
     customLaunchers,
-    frameworks: ["esm", ...defaults.frameworks],
     plugins: [
-      require.resolve("@open-wc/karma-esm"),
       "karma-mocha",
       "karma-typescript",
       "karma-sauce-launcher",
     ],
-    esm: {
-      nodeResolve: true,
-      moduleDirs: ["node_modules", "dist"],
-    },
+    // Test imports the bundle from a fixed path
+    proxies: { "/bundle.js": "/base/dist/core-browser.esm.min.js" },
     files: [
       { pattern: "test/esm.integration.js", type: "module" },
       { pattern: "dist/core-browser.esm.min.js", type: "module" },

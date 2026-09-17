@@ -22,10 +22,6 @@ module.exports = (config: any): void =>
     ],
     singleRun,
     basePath,
-    esm: {
-      nodeResolve: true,
-      moduleDirs: ["node_modules", "dist"],
-    },
     browsers: ["ChromeHeadless"],
     files: [
       { pattern: "dist/core-browser.umd.min.js"},
